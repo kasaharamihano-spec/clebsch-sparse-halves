@@ -1,0 +1,15 @@
+{
+  "position_sets": 8008,
+  "counts": {
+    "missing_colour": 5800,
+    "theta": 480,
+    "extended_star": 320,
+    "star": 16,
+    "pentagon_with_leaf": 960,
+    "double_star": 240,
+    "pentagon_plus_isolate": 192
+  },
+  "all_shapes_have_analytic_capacity_proofs": true,
+  "scope": "finite position census, not a capacity-vector sampling proof",
+  "program_sha256": "132e5e091ab1e98d5c17de0ef3b320f63d71e439a856315135d31a8104075aba"
+}

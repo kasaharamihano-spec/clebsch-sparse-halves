@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-23",
+  "balanced_cases": 9374,
+  "branches": {
+    "D_heavy": 5123,
+    "F_heavy": 1437,
+    "G_heavy": 2137,
+    "straddle_d": 117,
+    "straddle_e": 151,
+    "straddle_twin": 135,
+    "controlled_cycle_lift": 274
+  },
+  "arbitrary_vectors": 2586,
+  "exact_reduction_comparisons": 2586,
+  "all_constructed_and_rounded": true,
+  "program_sha256": "6cda2810f655ec9735193aea6213d0dd2c53b39d97569ffa08e35bb09cc07aab",
+  "scope": "finite exact implementation checks; analytic proof is in main.tex"
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-23",
+  "c5_edge_avoidance_grid": 1024,
+  "pendant_vectors": 4144,
+  "odd_totals": 2062,
+  "branches": {
+    "heavy_B": 4081,
+    "low_leaf_average": 18,
+    "straddling_edge": 3,
+    "nonnegative_increment_lift": 42
+  },
+  "all_vectors_constructed_and_rounded": true,
+  "program_sha256": "f0ffc176f102b8037e19802600d299a548cd3c294bc7a551443fedacbf52a147",
+  "scope": "exact finite implementation checks; universal claim uses the analytic proof"
+}

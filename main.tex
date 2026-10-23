@@ -10,7 +10,7 @@
 \newcommand{\F}{\mathbb F}
 \newcommand{\E}{\mathcal E}
 \newcommand{\half}{\tfrac12}
-\title{Some sparse-half bounds for nonuniform Clebsch blow-ups}
+\title{Sparse halves for Clebsch blow-ups\\with at most six exceptional classes}
 \author{\texttt{kasaharamihano-spec}}
 \date{23 October 2026\\[3pt]\small Research draft; not peer reviewed}
 \begin{document}
@@ -18,17 +18,16 @@
 \begin{abstract}
 Let $H$ be the Clebsch graph, and replace each vertex $v$ by an independent
 set of size $w_v$, with complete bipartite graphs on the edges of $H$.
-We give explicit arguments for the sparse-half bound $N^2/50$ in four
-restricted families: at most five class sizes differing from a common
-value; arbitrary sizes on a vertex and its five neighbours with the other
-ten classes equal; and arbitrary sizes on an induced pentagon and a
-vertex nonadjacent to it with the other ten classes equal; and arbitrary
-sizes on a specified induced double star with the other ten classes equal.
-The arguments use matching cuts, a known weighted pentagon construction,
-and Razborov's independence-ratio theorem.
-These statements do not settle arbitrary Clebsch blow-ups or the
-general sparse-half conjecture. The priority of these particular restricted
-consequences has not been established.
+We prove the sparse-half bound $N^2/50$ whenever at most six class sizes
+differ from a common value. The proof reduces the exceptional positions
+to six graph shapes using the five-generator representation, then treats
+their arbitrary capacities by matching cuts, weighted pentagon
+constructions, and Razborov's independence-ratio theorem.
+An explicit square identity gives a pentagon half avoiding a prescribed
+edge and supports the final two cyclic cases.
+This does not settle arbitrary Clebsch blow-ups or the general
+sparse-half conjecture. The priority of this restricted consequence
+has not been established.
 \end{abstract}
 
 \section{Statements and scope}
@@ -49,6 +48,17 @@ For integer capacities this is the natural relaxation of selecting vertices
 from the corresponding blow-up.
 
 \begin{theorem}\label{thm:main}
+If there is $c\geq0$ such that at most six capacities $w_v$ differ from $c$,
+the Clebsch blow-up admits a fractional half of cost at most $N^2/50$.
+For integer capacities it has a set of $\lfloor N/2\rfloor$ vertices
+inducing at most $N^2/50$ edges.
+\end{theorem}
+
+We prove the following family statements first, and give a short
+structural reduction to them at the end. The numbered parts below
+are referenced in the individual proofs.
+
+\begin{proposition}\label{prop:families}
 There is a fractional half of cost at most $N^2/50$ in each of the following
 families of nonnegative real capacities.
 \begin{enumerate}
@@ -62,10 +72,18 @@ $c\geq0$.
 $\{1,2,4,6,8,9\}$ are arbitrary, and all other ten capacities equal
 $c\geq0$. These six vertices induce a double star with adjacent centres
 $6,9$, left leaves $2,4$, and right leaves $1,8$.
+\item The capacities on $\{0,1,2,4,7,8\}$ are arbitrary, with the
+remaining ten equal. This is a star with one leaf edge extended.
+\item The capacities on $\{0,1,3,4,7,8\}$ are arbitrary, with the
+remaining ten equal. This is the pentagon $(0,1,3,7,8)$ with a
+pendant vertex $4$ attached to $0$.
+\item The capacities on $\{0,1,2,3,7,8\}$ are arbitrary, with the
+remaining ten equal. This is a theta graph with two paths of length two
+and one path of length three between $0$ and $3$.
 \end{enumerate}
 For integer capacities, the blow-up has a set of $\lfloor N/2\rfloor$
 vertices inducing at most $N^2/50$ edges.
-\end{theorem}
+\end{proposition}
 
 Our external inputs are explicitly identified below. In particular,
 the weighted $C_5$ construction is already present in
@@ -568,10 +586,358 @@ At least one of the two halves has cost at most $N^2/50$.
 This completes the balanced family and hence part (4).
 Lemma~\ref{lem:rounding} proves all integer assertions.
 
+\section{A pentagon half avoiding a prescribed edge}
+\begin{lemma}\label{lem:avoid}
+For nonnegative pentagon capacities $b_0,\ldots,b_4$, with sum $T$,
+there is a half of cost at most $T^2/50$ supported in
+$\{i,i+1,i+3\}$ for some $i\ne0$.
+Thus its template edge avoids the prescribed edge $\{0,1\}$.
+\end{lemma}
+\begin{proof}
+If a nonadjacent pair has mass at least $T/2$, use it at zero cost.
+Every such pair belongs to two pentagon templates, so at least one
+avoids the prescribed edge.
+Otherwise all the usual endpoint constructions are feasible.
+Use the following four, with their indicated costs:
+\[
+\begin{array}{c|c}
+\text{template}&\text{cost}\\
+\{1,2,4\}&q_1=b_2(T/2-b_2-b_4)\\
+\{4,0,2\}&q_2=b_4(T/2-b_4-b_2)\\
+\{2,3,0\}&q_3=b_3(T/2-b_3-b_0)\\
+\{3,4,1\}&q_4=b_3(T/2-b_3-b_1).
+\end{array}
+\]
+Put $U=b_0+b_1$, $V=b_2+b_4$, $Z=b_3$. Direct expansion gives
+\[
+ \frac{T^2}{50}
+ -\left(\frac{q_1+q_2}{5}+\frac{3(q_3+q_4)}{10}\right)
+ =\frac{(2U-3V+2Z)^2+15(V-2Z)^2}{200}\geq0 .
+\]
+The coefficients are nonnegative and sum to one.
+This proves the result, with the $T=0$ case immediate.
+The endpoint constructions themselves are the known ones recalled in
+Lemma~\ref{lem:c5}; the displayed identity provides the required
+nonuniform averaging here.
+\end{proof}
+
+\section{A star with an extended leaf edge}
+Give $0$ capacity $d$, the three simple leaves $1,2,4$ capacities
+$a_1,a_2,a_3$, vertex $8$ capacity $e$, vertex $7$ capacity $t$,
+and all other vertices capacity $c$. Put $a=(a_1+a_2+a_3)/3$.
+Averaging these three leaves does not decrease the least cost among
+the ten matching sides, and does not increase the maximum independent mass.
+For independence, average over the permutations of bit coordinates
+$1,2,4$, which fix $0,7,8$.
+For matching, the sides with one simple leaf can choose the actual
+largest leaf. A side with two simple leaves can omit the smallest;
+the remaining pair has mean at least $a$, so first use
+Lemma~\ref{lem:smoothing}, then capacity inclusion.
+Sides with all three simple leaves use repeated equalizing transfers
+between their leaf--background edges. Each transfer moves two capacities
+towards their common mean without crossing, and has the monotonicity
+proved in Lemma~\ref{lem:smoothing}.
+Sides without simple leaves are unchanged.
+
+It therefore suffices to treat $a_1=a_2=a_3=a$.
+For $c=0$ the positive support is bipartite, so take an independent half.
+For $c>0$ scale to $c=1$ and put
+\[
+ N=d+e+t+3a+10,\qquad h=N/2 .
+\]
+The six matching types are
+\[
+\begin{array}{ll}
+ A=(d,a),(t,1),2(1,1),&B=2(a,1),(e,1),(1,1),\\
+ C=(d,e),3(1,1),&D=3(a,1),(t,1),\\
+ E=(d,1),3(1,1),&F=(e,t),3(a,1).
+\end{array}
+\]
+Types $A,B$ each occur three times and are complementary;
+$C,D$ and $E,F$ are complementary.
+For $B,D,E$, their masses $M$ and costs $Q$ satisfy
+\[
+\begin{array}{c|c|c|c}
+ &M&Q&M^2-16Q\\
+ B&2a+e+5&2a+e+1&(2a+e-3)^2\\
+ D&3a+t+4&3a+t&(3a+t-4)^2\\
+ E&d+7&d+3&(d-1)^2 .
+\end{array}
+\]
+Any heavy such side settles the bound by scaling.
+Otherwise
+\[
+ 2a+e+5<h,\quad 3a+t+4<h,\quad d+7<h. \tag{BM}
+\]
+Thus $A,C,F$ are heavy and $h>7$.
+Four independent neighbourhoods have masses
+\[
+ d+t+3,\quad3a+e+1,\quad d+4,\quad e+4,
+\]
+witnessed respectively by $N_H(15),N_H(0),N_H(1),N_H(7)$.
+If any reaches $2N/5$, use Lemma~\ref{lem:alpha}.
+Otherwise, with
+\[
+ \nu=(d+t-3a-e+2)/2,\qquad H=3-h/5,
+\]
+the first two masses are $h-3\pm\nu$, so
+$|\nu|<H$, $H>0$, $h<15$, and also $d,e<4h/5-4$.
+
+For $7<h\leq10$, average the centre-edge capacities in $C$ to
+$T=(d+e)/2$. This can only increase its minimum cost.
+The resulting side $(T,T)+3(1,1)$ has capacity greater than $h$.
+Its minimum cost is at most
+\[
+ U=3+(h-6)^2/4 .
+\]
+Indeed, for $T\geq1$ the larger-endpoint filling either costs at most $3$,
+or costs $3+T(h-T-6)\leq U$.
+For $T<1$, feasibility gives $T>(h-6)/2$ and $h<8$.
+Fill both centre endpoints and then the background demand.
+The cost is $h-4+(T-1)^2\leq U$.
+Finally
+\[
+ N^2/50-U=(-17h^2+300h-1200)/100>0,
+\]
+a concave quadratic with endpoint values $67/100$ and $1$ on $[7,10]$.
+
+For $10\leq h<15$, we have $0<H\leq1$.
+On $A$, fill $d,t$ and the five background classes, then take
+$1-\nu$ from the simple leaf. It is positive, and
+$a-(1-\nu)=(d+t-a-e)/2>0$ by (BM).
+On $F$, fill $e$, all three simple leaves and three background classes,
+then take $1+\nu$ from the end vertex. It is positive, and
+$t-(1+\nu)=(e+t+3a-d-4)/2>0$ by (BM).
+Both have mass $h$. Their costs are
+\[
+ F_A=d(1-\nu)+t+2,\qquad F_F=e(1+\nu)+3a,
+\]
+with average $h-4+(e-d)\nu/2$.
+The second inequality of (BM) gives $d+e>h-6$.
+Combining this with $d,e<4h/5-4$ gives
+$|e-d|<3h/5-2=7-3H$.
+As $h=15-5H$, the target minus this average is at least
+\[
+ 7-7H+2H^2-H(7-3H)/2
+ =\tfrac72(H-1)(H-2)\geq0 .
+\]
+This proves part (5).
+
+\section{A pentagon with a pendant vertex}
+Let $P=(0,1,3,7,8)$ have capacities $p_0,\ldots,p_4$,
+and give the pendant vertex $4$ capacity $d$.
+The remaining ten capacities are $c$.
+Put $W=\sum p_i$, $N=W+d+10c$, $h=N/2$.
+Let $A_i$ be the matching side with pentagon triple
+$\{i,i+1,i+3\}$, and $B_i$ its complement.
+The pendant vertex belongs to $A_1,A_2,A_3$, and to $B_0,B_4$.
+The pair types in $A_i$ are
+\[
+\begin{array}{ll}
+ i=0,4:&(p_i,p_{i+1}),(p_{i+3},c),2(c,c),\\
+ i=1,3:&(p_i,p_{i+1}),(p_{i+3},c),(d,c),(c,c),\\
+ i=2:&(p_2,p_3),(p_0,d),2(c,c).
+\end{array}
+\]
+Set $s_i=p_{i+2}+p_{i+4}$.
+For $i=0,4$, $B_i$ has mass $s_i+d+5c$ and cost
+$c(s_i+d)+c^2$, with square gap $(s_i+d-3c)^2$.
+For the other three sides its mass is $s_i+6c$ and cost
+$cs_i+2c^2$, with gap $(s_i-2c)^2$.
+Unless a heavy $B_i$ already settles the bound, assume
+\[
+ s_0,s_4<(W-d)/2,\qquad
+ s_1,s_2,s_3<(W+d-2c)/2. \tag{PB}
+\]
+All $A_i$ are then heavy.
+
+First let $d\leq c$, and put
+$k_0=(W+d)/2$, $k_1=(W-d+2c)/2$.
+In $A_0,A_4$ fill the five background classes, and take pentagon mass $k_0$.
+In $A_1,A_2,A_3$ fill $d$ and the four background classes, and take
+pentagon mass $k_1$.
+In each case fill $p_i,p_{i+3}$ and complete from $p_{i+1}$.
+The omitted pair bounds in (PB) guarantee enough total capacity.
+The filled nonadjacent pairs for $i=0,\ldots,4$ are
+$s_1,s_2,s_3,s_4,s_0$; their bounds in (PB), using $d\leq c$,
+guarantee nonnegative completion amounts.
+The five costs are
+\[
+\begin{array}{ll}
+ i=0,4:&q_i=p_i(k_0-p_i-p_{i+3})+cp_{i+3}+2c^2,\\
+ i=1,3:&q_i=p_i(k_1-p_i-p_{i+3})+cp_{i+3}+cd+c^2,\\
+ i=2:&q_2=p_2(k_1-p_2-p_0)+dp_0+2c^2 .
+\end{array}
+\]
+Their sum equals
+\[
+ k_1W-\tfrac12\sum_i(p_i+p_{i+3})^2+cW
+ +(d-c)(2p_0+p_4)+8c^2+2cd .
+\]
+Cauchy--Schwarz and $d-c\leq0$ give average at most
+\[
+ H_{\rm low}=W^2/50+2cW/5-Wd/10+(8c^2+2cd)/5 .
+\]
+The target gap is $7Wd/50+d^2/50+2c^2/5\geq0$.
+
+Now let $d\geq c$.
+Adding pairs of inequalities in (PB), using
+$s_0+s_4=W-p_0$, $s_1+s_0=W-p_1$ and $s_3+s_4=W-p_4$,
+gives $p_0>d$, $p_1>c$, $p_4>c$.
+If $p_2\leq c$, the heavy side $A_1$ satisfies
+\[
+ Q=cM-4c^2+(p_1-c)(p_2-c)\leq cM-4c^2 .
+\]
+Scaling settles it. If $p_3\leq c$, use $A_3$ in the same way.
+Hence only the case $p_i,d\geq c$ remains.
+
+Write $b_i=p_i-c$, $q=d-c$, $T=\sum b_i+q$, so $N=16c+T$.
+Use virtual pentagon capacities
+$(b_0,b_1+q,b_2,b_3,b_4)$.
+Lemma~\ref{lem:avoid} gives a half of cost at most $T^2/50$ in a
+template with $i\ne0$.
+Split its selected mass at vertex $1$ between the actual vertex $1$
+and the pendant vertex $4$, with capacities $b_1,q$.
+For $i=1,3$ the cycle vertex $0$ is omitted, so the pendant increment
+has no additional increment edges, and lifting cannot increase cost.
+For $i=2,4$, the selected mass at virtual vertex $1$ is zero.
+Each lifted support lies in its actual matching side $A_i$.
+Adding baseline $c$ at all eight side vertices gives mass $N/2$ and cost
+at most $4c^2+cT/2+T^2/50\leq N^2/50$.
+This proves part (6), including zero capacities and $c=0$.
+
+\section{Two pentagons sharing a three-edge path}
+Let the exceptional positions be $\{0,1,2,3,7,8\}$.
+Write $d=w_0$, $e=w_3$, $t=w_7$, $f=w_8$.
+Average $w_1,w_2$ to $a$.
+A matching side containing both has them on separate background edges,
+so Lemma~\ref{lem:smoothing} applies.
+A side containing just one can use the actual larger capacity in its
+interchanged counterpart. All other sides are unchanged.
+Thus the least matching-side cost for the original weights is no greater
+than for the averaged weights; the common target $N/2$ is unchanged.
+
+For the balanced family $N=d+e+t+f+2a+10c$.
+The relevant types are
+\[
+\begin{array}{ll}
+ A=(d,a),(t,c),2(c,c),&A'=(a,e),(f,c),2(c,c),\\
+ C=(e,t),(d,c),2(c,c),&D=2(a,c),(f,c),(c,c),\\
+ E=(d,f),(e,c),2(c,c),&F=2(a,c),(t,c),(c,c),\\
+ G=(d,c),(e,c),2(c,c),&H=(t,f),2(a,c),(c,c).
+\end{array}
+\]
+Types $C,D$, $E,F$ and $G,H$ are complementary;
+an $A$ also has a complementary $A'$.
+Types $D,F,G$ satisfy $Q=cM-4c^2$.
+Unless a heavy such side suffices, assume
+\[
+ 2a+f+5c<h,\quad 2a+t+5c<h,\quad d+e+6c<h. \tag{TB}
+\]
+Adding the first and third inequalities, and then the second and third,
+gives $t>c$, $f>c$.
+
+If $e\leq c$, use the heavy side $C$:
+its only non-background edge $(e,t)$ straddles $c$, so
+$Q=cM-4c^2+(e-c)(t-c)\leq cM-4c^2$.
+If $d\leq c$, similarly use $E$.
+If $a\leq c$, one of the complementary sides $A,A'$ is heavy,
+and both of their non-background edges straddle $c$.
+All these cases give cost at most $N^2/64$.
+We may therefore assume all $d,e,t,f,a\geq c$.
+
+Use virtual pentagon capacities
+\[
+ b_0=d-c,\quad b_1=2(a-c),\quad b_2=e-c,\quad
+ b_3=t-c,\quad b_4=f-c,
+ \qquad T=\sum b_i,\quad N=16c+T .
+\]
+We require an extra property when lifting the virtual vertex $1$:
+if it is isolated in the chosen template, its selected mass can be
+split between the two actual parts;
+if it is on the template edge, its selected mass must be at most
+$b_1/2=a-c$, so one actual part can hold it.
+
+If a nonadjacent pair has mass at least $T/2$, use a zero-cost half.
+Pairs containing $1$ lie in the template $\{3,4,1\}$, where $1$ is isolated.
+Pairs not containing $1$ lie in $\{2,3,0\}$ or $\{4,0,2\}$,
+which omit $1$. Thus the extra property holds.
+
+Otherwise all nonadjacent pair masses are below $T/2$.
+If $b_2+b_4\leq b_0+b_3$, apply the four explicit constructions of
+Lemma~\ref{lem:avoid} after shifting indices by one, thereby avoiding
+edge $\{1,2\}$.
+The only retained template with $1$ on an edge is $\{0,1,3\}$;
+the chosen orientation fills $b_0,b_3$, so it takes
+$T/2-b_0-b_3\leq b_1/2$ at $1$.
+If $b_2+b_4\geq b_0+b_3$, use the unshifted lemma, avoiding $\{0,1\}$.
+The only retained edge template using $1$ is $\{1,2,4\}$;
+it fills $b_2,b_4$ and takes at most $b_1/2$ at $1$.
+The square identity guarantees a half of cost at most $T^2/50$
+among the respective four candidates.
+
+Lift it as just described to the two actual parts at vertices $1,2$.
+Templates $i=0,1$ use one such part, $i=2,4$ use none,
+and $i=3$ allows both as isolated increment vertices.
+Each support fits an actual matching side and its increment cost is
+the virtual cycle cost.
+Add baseline $c$ at all eight side vertices.
+Again the mass is $N/2$ and the cost is at most
+$4c^2+cT/2+T^2/50\leq N^2/50$.
+This proves part (7) and completes Proposition~\ref{prop:families}.
+
+\section{Proof of the six-exception theorem}
+Enlarge the set of exceptional positions, if necessary, to a set $X$
+of exactly six vertices; all other capacities are $c$.
+If some generator colour is absent inside $X$, the missing-colour
+argument in the five-exception proof gives cost at most $N^2/64$.
+
+Otherwise select one edge of each of the five colours inside $X$.
+Call the resulting graph $F$.
+If it contains a cycle, its distinct edge colours sum to zero;
+the unique nonempty zero-sum subset of $D$ forces a pentagon.
+If $F$ is acyclic, its five edges on six vertices form a tree.
+Any four-edge path uses four distinct colours; their sum is the fifth
+generator, so its endpoints are adjacent in $H$, producing a pentagon.
+A five-edge path is impossible, since its endpoint difference would be
+the sum of all five generators, namely zero.
+
+If $H[X]$ has no pentagon, this tree has diameter at most three.
+It is therefore a star, an extended-leaf star, or a double star.
+There are no additional edges in $H[X]$:
+a putative new edge joins tree vertices at distance two or three;
+the tree-path colours are distinct, and adding the new colour leaves
+a nonempty set of at most four odd-multiplicity colours summing to zero,
+a contradiction. Parts (2), (4), (5) apply.
+
+If $H[X]$ contains a pentagon, its sixth vertex has at most two neighbours
+on the cycle, since they must form an independent set on the pentagon.
+Zero neighbours gives part (3), one gives part (6), and two nonadjacent
+neighbours give part (7).
+
+For completeness these abstract shapes have the representative labels
+used above. Along any pentagon each of the five colours occurs once.
+Every permutation of $D$ induces a linear automorphism: any four of its
+generators are independent, and their unique relation is $\sum D=0$.
+Together with translations this maps any cyclically ordered pentagon
+to $(0,1,3,7,8)$.
+The neighbours of $0$ outside this cycle are $2,4,15$:
+the first also meets $3$, the last also meets $7$, and only $4$ is pendant.
+For an extra vertex meeting $0,3$, the common neighbours of these
+two vertices are exactly $1,2$, so the extra vertex is $2$.
+The tree representatives follow by mapping their five distinct edge
+colours and then translating a root.
+The isolated-vertex proof already treats any common nonneighbour.
+
+All cases therefore admit the required fractional half.
+Lemma~\ref{lem:rounding} gives the integer assertion and proves
+Theorem~\ref{thm:main}.
+
+
 \section{Verification and limitations}
 The supplied exact-arithmetic verifier reconstructs the core, matching
 cuts, and independent-set witnesses. It checks bounded examples of the
-four families and verifies returned selections against all core edges.
+family representatives and verifies returned selections against all core edges.
 Such finite checks support reproducibility; the proofs above establish
 the unrestricted parameter claims.
 
@@ -579,8 +945,8 @@ The general sparse-half problem remains outside the scope of this note.
 Uniform Clebsch graphs are covered by Razborov's strongly regular graph
 result~\cite[Theorem 3.5 and Section 4.4]{R}; the present text concerns
 specified nonuniform families. Known ingredients are attributed explicitly.
-A bounded literature search has not located these exact restricted-family
-statements, but this does not establish priority or exclude a stronger
+A bounded literature search has not located this exact six-exception
+statement, but this does not establish priority or exclude a stronger
 prior theorem implying them. There is no claim of a prize-qualifying solution.
 
 \paragraph{AI-use and contribution disclosure.}

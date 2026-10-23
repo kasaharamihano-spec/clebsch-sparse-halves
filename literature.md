@@ -2,7 +2,7 @@
 
 Checked on 23 October 2026. This is a bounded primary-source review, not a certification of priority.
 
-The project has not located a primary theorem explicitly asserting the four complete restricted capacity families stated in this note. This does not exclude an unindexed manuscript, an earlier implicit consequence, or a stronger theorem not found in the search.
+The project has not located a primary theorem explicitly asserting the complete six-exception capacity statement in this note. This does not exclude an unindexed manuscript, an earlier implicit consequence, or a stronger theorem not found in the search.
 
 ## Existing ingredients and overlapping cases
 
@@ -16,4 +16,4 @@ The project has not located a primary theorem explicitly asserting the four comp
 - [cormundus/erdos-128-census](https://github.com/cormundus/erdos-128-census) discusses uniform strongly regular graph certificates and numerical weighted searches.
 - [aimir/erdos-128-sparse-halves](https://github.com/aimir/erdos-128-sparse-halves) states a general bound of 131/5000 in its inspected manuscript, larger than 1/50. Its Clebsch configuration appears in a different certificate, not an identified theorem for all capacities in the present four families.
 
-Searches included combinations of Clebsch, sparse half, weighted blow-up, pentagon, isolated vertex, neighbours, double star, and the cited papers. All boundary cases, tools, and already known uniform results remain attributed to their sources. No claim of first discovery, external peer review, or eligibility for the original problem's prize is made.
+Searches included combinations of Clebsch, sparse half, weighted blow-up, exceptional classes, pentagon, isolated vertex, neighbours, double star, and the cited papers. All boundary cases, tools, and already known uniform results remain attributed to their sources. The square-identity variant of the pentagon argument is explicitly proved here, but its prior appearance has not been ruled out. No claim of first discovery, external peer review, or eligibility for the original problem's prize is made.

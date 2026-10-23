@@ -155,8 +155,12 @@ def main():
     assert all((10 ^ v) not in D for v in cycle)
     output = {}
     double_star = (6, 9, 2, 4, 1, 8)
+    broom = (0, 8, 7, 1, 2, 4)
+    pendant = (0, 1, 3, 7, 8, 4)
+    theta = (0, 1, 2, 3, 7, 8)
     for name, vertices in (("star", star), ("cycle_plus_isolate", cycle_isolate),
-                           ("double_star", double_star)):
+                           ("double_star", double_star), ("extended_star", broom),
+                           ("pentagon_with_leaf", pendant), ("theta", theta)):
         counts = new_counts()
         for w in family_grid(vertices):
             verify(w, counts)
@@ -169,13 +173,13 @@ def main():
             verify(w, counts)
         output[name] = counts
     counts = new_counts()
-    # Every labelled five-position set, with fixed asymmetric positive capacities.
-    for vertices in combinations(range(16), 5):
+    # Every labelled six-position set, with fixed asymmetric nonnegative capacities.
+    for vertices in combinations(range(16), 6):
         w = [2] * 16
-        for v, val in zip(vertices, (0, 1, 3, 5, 8)):
+        for v, val in zip(vertices, (0, 1, 3, 5, 8, 14)):
             w[v] = val
         verify(w, counts)
-    output["five_exception_position_sets"] = counts
+    output["six_exception_position_sets"] = counts
     output["status"] = "all finite checks passed; see paper for universal proofs"
     output["script_sha256"] = sha256(Path(__file__).read_bytes()).hexdigest()
     destination = Path(__file__).with_name("verification_results.json")

@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-23",
+  "balanced_grid_cases": 9603,
+  "balanced_branches": {
+    "B_heavy": 3948,
+    "zero_background_independent": 2400,
+    "E_heavy": 1328,
+    "D_heavy": 1643,
+    "known_independence": 190,
+    "central_edge_low_mass": 60,
+    "two_explicit_halves_high_mass": 34
+  },
+  "arbitrary_leaf_vectors": 2586,
+  "exact_matching_reduction_comparisons": 1813,
+  "arbitrary_vectors_constructed_and_rounded": 1813,
+  "status": "all exact bounded checks passed; universal claim uses the analytic proof",
+  "program_sha256": "715a7988f34d2c6903430b71381717140b93ae119474858822a247796388d250"
+}

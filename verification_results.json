@@ -17,12 +17,30 @@
     "published_independence_theorem": 1597,
     "constructed_and_rounded": 689
   },
-  "five_exception_position_sets": {
-    "examples": 4368,
-    "odd_total": 4368,
-    "published_independence_theorem": 4368,
+  "extended_star": {
+    "examples": 2286,
+    "odd_total": 1146,
+    "published_independence_theorem": 1534,
+    "constructed_and_rounded": 752
+  },
+  "pentagon_with_leaf": {
+    "examples": 2286,
+    "odd_total": 1143,
+    "published_independence_theorem": 1571,
+    "constructed_and_rounded": 715
+  },
+  "theta": {
+    "examples": 2286,
+    "odd_total": 1143,
+    "published_independence_theorem": 1447,
+    "constructed_and_rounded": 839
+  },
+  "six_exception_position_sets": {
+    "examples": 8008,
+    "odd_total": 8008,
+    "published_independence_theorem": 8008,
     "constructed_and_rounded": 0
   },
   "status": "all finite checks passed; see paper for universal proofs",
-  "script_sha256": "2ace9c436ad14cc8411386b7c87100e332cbaaf115ba34deba31a559f81b503f"
+  "script_sha256": "ff9a9e227a945cd21a433a4bcff6ef7bb0ce3c25cd5ff6c037c31c4e4468e14b"
 }
