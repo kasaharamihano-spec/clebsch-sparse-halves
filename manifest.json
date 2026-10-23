@@ -1,0 +1,13 @@
+{
+  "version": "2026-10-23",
+  "public_author": "kasaharamihano-spec",
+  "privacy_check": "no email, phone-pattern, token prefix, or user-directory path found",
+  "files": {
+    "README.md": "8f34b898d467b68f6bdb3a13c97690843d699fd8757f1f627cf64ab22d318d00",
+    "paper.md": "878c3d28e634de8566d94d01553e0fd547a73cc2dd4909f926518221c7523be3",
+    "main.tex": "b4ce931848e010589223e197872a7e3b375405ef44d43697e2e4f18c53fae211",
+    "verify_families.py": "2ace9c436ad14cc8411386b7c87100e332cbaaf115ba34deba31a559f81b503f",
+    "verification_results.json": "5596f5734c6779b2c7827275a756e834f31143627364df6db67c338b3ee60dc3",
+    "literature.md": "02fd3cec97a4b49a11b7c7bc4f441590723a85e4678960dc48b144692ce1db5b"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "star": {
+    "examples": 2286,
+    "odd_total": 1136,
+    "published_independence_theorem": 1421,
+    "constructed_and_rounded": 865
+  },
+  "cycle_plus_isolate": {
+    "examples": 2286,
+    "odd_total": 1159,
+    "published_independence_theorem": 1600,
+    "constructed_and_rounded": 686
+  },
+  "double_star": {
+    "examples": 2286,
+    "odd_total": 1135,
+    "published_independence_theorem": 1597,
+    "constructed_and_rounded": 689
+  },
+  "five_exception_position_sets": {
+    "examples": 4368,
+    "odd_total": 4368,
+    "published_independence_theorem": 4368,
+    "constructed_and_rounded": 0
+  },
+  "status": "all finite checks passed; see paper for universal proofs",
+  "script_sha256": "2ace9c436ad14cc8411386b7c87100e332cbaaf115ba34deba31a559f81b503f"
+}
