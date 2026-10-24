@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-24",
+  "status": "PASS",
+  "program_sha256": "a9bf7ae054e6cdeb5c06c0105663d767dab5d9aa7505487c2d4e7e6e443db591",
+  "corner_polynomial_coefficients": [
+    [
+      28,
+      0,
+      0
+    ],
+    [
+      -3,
+      48,
+      -17
+    ],
+    [
+      -18,
+      64,
+      -18
+    ],
+    [
+      -17,
+      48,
+      -3
+    ],
+    [
+      0,
+      0,
+      28
+    ]
+  ],
+  "exact_quadratic_field_root_check": true,
+  "threshold": "(24+5sqrt(21))/17",
+  "threshold_approximation_display_only": 2.7595810867517176,
+  "constructed_and_rounded": 66036,
+  "odd_total": 33020,
+  "scope": "Exact polynomial identities and finite full-core witnesses; unrestricted theorem and sign arguments are supplied by the written proof."
+}

@@ -1,0 +1,287 @@
+{
+  "date": "2026-10-24",
+  "program_sha256": "2342bcbe18672ef411632c248d4c0686528d6e6688561879f22fc293f1fb2c7b",
+  "status": "PASS",
+  "input_order": [
+    0,
+    3,
+    1,
+    2,
+    4,
+    8,
+    15
+  ],
+  "totals": {
+    "examples": 12472,
+    "published_theorem_premise": 7828,
+    "explicit_fractional_construction": 4644,
+    "explicit_integer_rounding": 4509,
+    "odd_integer_rounding": 2171
+  },
+  "branch_counts": {
+    "independence_0": 735,
+    "low_d_b_better_A_C": 57,
+    "D_heavy": 1264,
+    "independence_2": 5921,
+    "C_straddling": 669,
+    "independence_1": 1172,
+    "low_d_b_A_straddling": 18,
+    "low_d_b_A_light": 20,
+    "low_d_b_large_half": 28,
+    "high_d_b_small_a_A_heavy": 79,
+    "high_d_b_small_a_e_large_half": 18,
+    "high_d_b_small_a_B_straddling": 175,
+    "high_half_nonnegative_nu": 54,
+    "high_half_negative_nu_large_e": 53,
+    "high_half_negative_nu_A_partial": 6,
+    "zero": 1,
+    "zero_background": 2186,
+    "high_d_b_large_a_low_half": 13,
+    "high_d_b_small_a_e_small_half": 1,
+    "high_half_negative_nu_B_heavy": 2
+  },
+  "branch_examples": {
+    "independence_0": {
+      "capacities_in_X_order": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "background": "2"
+    },
+    "low_d_b_better_A_C": {
+      "capacities_in_X_order": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "1",
+        "1"
+      ],
+      "background": "2"
+    },
+    "D_heavy": {
+      "capacities_in_X_order": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "2",
+        "2"
+      ],
+      "background": "2"
+    },
+    "independence_2": {
+      "capacities_in_X_order": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "4",
+        "4",
+        "4"
+      ],
+      "background": "2"
+    },
+    "C_straddling": {
+      "capacities_in_X_order": [
+        "0",
+        "1",
+        "0",
+        "0",
+        "2",
+        "2",
+        "2"
+      ],
+      "background": "2"
+    },
+    "independence_1": {
+      "capacities_in_X_order": [
+        "0",
+        "3",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "background": "2"
+    },
+    "low_d_b_A_straddling": {
+      "capacities_in_X_order": [
+        "0",
+        "3",
+        "2",
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      "background": "2"
+    },
+    "low_d_b_A_light": {
+      "capacities_in_X_order": [
+        "0",
+        "4",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "background": "2"
+    },
+    "low_d_b_large_half": {
+      "capacities_in_X_order": [
+        "0",
+        "6",
+        "2",
+        "2",
+        "1",
+        "1",
+        "1"
+      ],
+      "background": "2"
+    },
+    "high_d_b_small_a_A_heavy": {
+      "capacities_in_X_order": [
+        "3",
+        "0",
+        "0",
+        "0",
+        "3",
+        "3",
+        "3"
+      ],
+      "background": "2"
+    },
+    "high_d_b_small_a_e_large_half": {
+      "capacities_in_X_order": [
+        "3",
+        "0",
+        "0",
+        "0",
+        "4",
+        "4",
+        "4"
+      ],
+      "background": "2"
+    },
+    "high_d_b_small_a_B_straddling": {
+      "capacities_in_X_order": [
+        "3",
+        "2",
+        "0",
+        "0",
+        "3",
+        "3",
+        "3"
+      ],
+      "background": "2"
+    },
+    "high_half_nonnegative_nu": {
+      "capacities_in_X_order": [
+        "3",
+        "6",
+        "3",
+        "3",
+        "3",
+        "3",
+        "3"
+      ],
+      "background": "2"
+    },
+    "high_half_negative_nu_large_e": {
+      "capacities_in_X_order": [
+        "3",
+        "8",
+        "3",
+        "3",
+        "4",
+        "4",
+        "4"
+      ],
+      "background": "2"
+    },
+    "high_half_negative_nu_A_partial": {
+      "capacities_in_X_order": [
+        "8",
+        "0",
+        "3",
+        "3",
+        "3",
+        "3",
+        "3"
+      ],
+      "background": "2"
+    },
+    "zero": {
+      "capacities_in_X_order": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "background": "0"
+    },
+    "zero_background": {
+      "capacities_in_X_order": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "background": "0"
+    },
+    "high_d_b_large_a_low_half": {
+      "capacities_in_X_order": [
+        "2",
+        "2",
+        "1",
+        "2",
+        "0",
+        "2",
+        "2"
+      ],
+      "background": "1"
+    },
+    "high_d_b_small_a_e_small_half": {
+      "capacities_in_X_order": [
+        "33",
+        "0",
+        "0",
+        "0",
+        "43",
+        "43",
+        "43"
+      ],
+      "background": "30"
+    },
+    "high_half_negative_nu_B_heavy": {
+      "capacities_in_X_order": [
+        "16/5",
+        "7/10",
+        "0",
+        "11/5",
+        "4797/2000",
+        "62127/25000",
+        "48321/50000"
+      ],
+      "background": "1"
+    }
+  },
+  "elapsed_seconds": 2.905999999959022,
+  "scope": "Bounded exact checks of explicit full-core constructions and integer rounding; unrestricted capacity theorem relies on the analytic proof; independence branches verify only the premise of the attributed theorem."
+}

@@ -10,9 +10,9 @@
 \newcommand{\F}{\mathbb F}
 \newcommand{\E}{\mathcal E}
 \newcommand{\half}{\tfrac12}
-\title{Sparse halves for Clebsch blow-ups\\with at most six exceptional classes}
+\title{Sparse halves for Clebsch blow-ups:\\six exceptional classes and a star extension}
 \author{\texttt{kasaharamihano-spec}}
-\date{23 October 2026\\[3pt]\small Research draft; not peer reviewed}
+\date{24 October 2026\\[3pt]\small Research draft; not peer reviewed}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -25,6 +25,12 @@ their arbitrary capacities by matching cuts, weighted pentagon
 constructions, and Razborov's independence-ratio theorem.
 An explicit square identity gives a pentagon half avoiding a prescribed
 edge and supports the final two cyclic cases.
+We also treat seven arbitrary capacities on a vertex, its five neighbours,
+and one further vertex, with the other nine capacities equal. A direct
+lift preserves the constructions for independently unequal leaf capacities.
+Finally, an elementary matching criterion permits all sixteen positive
+capacities to vary when their maximum-to-minimum ratio is at most
+$(24+5\sqrt{21})/17$.
 This does not settle arbitrary Clebsch blow-ups or the general
 sparse-half conjecture. The priority of this restricted consequence
 has not been established.
@@ -157,7 +163,7 @@ so cost cannot increase. The target mass is now $\lfloor N/2\rfloor$.
 Given two coordinates strictly between zero and their integer capacities,
 vary them as $x_i+t,x_j-t$. The cost is concave in $t$, its quadratic
 coefficient being $-a_{ij}\leq0$. Some feasible endpoint does not increase
-cost and makes at least one more coordinate integral.
+cost and moves at least one further coordinate to a capacity boundary.
 Repeat until at most one coordinate is internal.
 Its integrality follows from the integer total mass.
 \end{proof}
@@ -934,6 +940,9 @@ Lemma~\ref{lem:rounding} gives the integer assertion and proves
 Theorem~\ref{thm:main}.
 
 
+\input{seven_star.tex}
+\input{bounded_ratio.tex}
+
 \section{Verification and limitations}
 The supplied exact-arithmetic verifier reconstructs the core, matching
 cuts, and independent-set witnesses. It checks bounded examples of the
@@ -945,9 +954,19 @@ The general sparse-half problem remains outside the scope of this note.
 Uniform Clebsch graphs are covered by Razborov's strongly regular graph
 result~\cite[Theorem 3.5 and Section 4.4]{R}; the present text concerns
 specified nonuniform families. Known ingredients are attributed explicitly.
-A bounded literature search has not located this exact six-exception
-statement, but this does not establish priority or exclude a stronger
-prior theorem implying them. There is no claim of a prize-qualifying solution.
+A bounded literature search has not located the exact six-exception or
+seven-class star-extension statements, but this does not establish priority
+or exclude a stronger prior theorem implying them.
+The general seven-exception case and arbitrary weighted Clebsch graphs
+remain unresolved here. There is no claim of a prize-qualifying solution.
+
+The standard-library verifier \texttt{square\_star\_full\_check.py}
+checks all construction branches on 12,472 bounded examples, returning
+4,644 explicit fractional halves and performing 4,509 integer roundings.
+The remaining 7,828 examples verify the premise of the attributed
+independence-ratio theorem, rather than claiming to construct its half.
+The separate \texttt{ratio\_check.py} checks exact corner-polynomial
+identities and explicit bounded-ratio halves.
 
 \paragraph{AI-use and contribution disclosure.}
 This project was initiated and directed by the account
@@ -959,6 +978,9 @@ the account holder personally derived or independently verified every step.
 AI cross-checks are not external expert review or formal verification.
 This draft is shared for examination with these limitations explicit.
 No AI system is listed as a human author.
+Exact symbolic workflow used SymPy 1.14.0 and the SymPy skill from
+Scientific Agent Skills~\cite{K}; that is software-workflow attribution,
+not a source for the mathematical claims.
 
 \begin{thebibliography}{9}
 \bibitem{B}
@@ -977,5 +999,9 @@ A. Razborov,
 Sbornik: Mathematics \textbf{213} (2022), 109--128.
 \href{https://doi.org/10.1070/SM9615}{doi:10.1070/SM9615};
 author version: \href{https://arxiv.org/abs/2104.09406v2}{arXiv:2104.09406v2}.
+\bibitem{K}
+T. Kassis, V. Agarwal, Y. He, D. Patel and A. M. Brueckner,
+\emph{Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents},
+2026. \href{https://doi.org/10.48550/arXiv.2609.00065}{arXiv:2609.00065}.
 \end{thebibliography}
 \end{document}

@@ -1,14 +1,14 @@
 {
-  "version": "2026-10-23",
+  "version": "2026-10-24",
   "public_author": "kasaharamihano-spec",
   "privacy_check": "no email, phone-pattern, token prefix, or user-directory path found",
   "files": {
-    "README.md": "666c2d7cc0736ca4b7de28d83e95a288ffcd8e50a3631096f3df97ec764337af",
-    "paper.md": "228662e066a177c1de76d4cc98009a391ee88fec5bf33041252785005ae9870c",
-    "main.tex": "2da78d2886a2d8cc1da301d4d8e36eb13be3c68dfa445879058c162848ae2476",
+    "README.md": "8baa0d61fa95cf32e2eaa051627a179ef74a05d635561ebfc824a558d301b955",
+    "paper.md": "a7f8e89054cdcf1be9330352e5bedf894b73ce898216dce0a0a22596be902580",
+    "main.tex": "d7433429390274717f0723e546869f55225ceb8a94362ea466e30149d345af1c",
     "verify_families.py": "ff9a9e227a945cd21a433a4bcff6ef7bb0ce3c25cd5ff6c037c31c4e4468e14b",
     "verification_results.json": "5c86c41acb23171fa3496b8c0f76ae049b05f9cda27d4844d03a2d79739555e0",
-    "literature.md": "f694d2a382ba044230cdd2033de4bb742f0813139d37e57dcf2f3593db8a528b",
+    "literature.md": "882f45451c19ff342a30168800905735a83afb37b0bd4fc6929d2e0388371f10",
     "broom_check.py": "715a7988f34d2c6903430b71381717140b93ae119474858822a247796388d250",
     "broom_check_results.json": "8d74f1fc1c3929cbe4bc1eff916b2aac83070a20a849618a07db051e9667cfff",
     "cycle_pendant_check.py": "f0ffc176f102b8037e19802600d299a548cd3c294bc7a551443fedacbf52a147",
@@ -16,6 +16,12 @@
     "theta_check.py": "6cda2810f655ec9735193aea6213d0dd2c53b39d97569ffa08e35bb09cc07aab",
     "theta_check_results.json": "100eb2f6d0bc756c96f623b415636b52d637a36f2e7706175cbabaa8b72b6946",
     "classification_check.py": "132e5e091ab1e98d5c17de0ef3b320f63d71e439a856315135d31a8104075aba",
-    "classification_results.json": "4e69a4c7811a752662e28434979a4d1b915ceca7deb884ad33dbdb97196dcc55"
+    "classification_results.json": "4e69a4c7811a752662e28434979a4d1b915ceca7deb884ad33dbdb97196dcc55",
+    "seven_star.tex": "71d9cb2340612cea7be73afeae9f31ddc33083c0f62ce972f9df5d2315dfeafa",
+    "bounded_ratio.tex": "21c9c4dca3acff0eb8d9ee6dbec3d6e9802b696eb6797d3d54c69132c3b21c3c",
+    "square_star_full_check.py": "2342bcbe18672ef411632c248d4c0686528d6e6688561879f22fc293f1fb2c7b",
+    "square_star_full_results.json": "70c5a9ae42d773f95ade40bf20f0b4a08e10628775d51cdcff9a743717dbd0d0",
+    "ratio_check.py": "a9bf7ae054e6cdeb5c06c0105663d767dab5d9aa7505487c2d4e7e6e443db591",
+    "ratio_results.json": "72a74105f7d02d84f68156eea301d2e87daf0eb8914fb41cd63abace0d540dd0"
   }
 }

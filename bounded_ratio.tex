@@ -1,0 +1,53 @@
+\section{A bounded-ratio criterion for all sixteen capacities}
+
+\begin{proposition}\label{prop:ratio}
+If all sixteen capacities are positive and
+\[
+ \frac{\max_vw_v}{\min_vw_v}\leq r_*:=\frac{24+5\sqrt{21}}{17},
+\]
+the Clebsch blow-up has a fractional half of cost at most $N^2/50$,
+and the integer conclusion follows for integer capacities.
+\end{proposition}
+\begin{proof}
+Write $m=\min_vw_v$, $M=\max_vw_v$, and $r=M/m$.
+Consider any matching side, with pair totals $s_1,\ldots,s_4$,
+total mass $L$ and full cost $Q$. Then
+\[
+ Q\leq\frac14\sum_js_j^2,\qquad
+ \frac{Q}{L^2}\leq\frac{\sum_jt_j^2}{4(\sum_jt_j)^2},
+ \quad t_j=s_j/(2m)\in[1,r].
+\]
+Holding the other coordinates fixed, and writing their sum and sum of
+squares as $S,A$, gives derivative
+\[
+ \frac{d}{dt}\frac{t^2+A}{(t+S)^2}
+ =\frac{2(tS-A)}{(t+S)^3}.
+\]
+An interior turning point is a minimum. Each coordinate can therefore
+be moved to an endpoint without decreasing the ratio, so its maximum
+over the box occurs at a corner. With $k$ coordinates equal to $r$,
+the desired bound $Q/L^2\leq2/25$ follows from
+\[
+ P_k(r)=8(kr+4-k)^2-25(kr^2+4-k)\geq0.
+\]
+Here $P_0=28$, $P_4=28r^2$, and
+\[
+ P_1=-17r^2+48r-3,\quad
+ P_2=P_1+(r-1)(15-r),\quad
+ P_3=P_1+14(r^2-1).
+\]
+For $1\leq r\leq r_*<3$, all are nonnegative: $r_*$ is the larger
+root of $P_1$ and its smaller root is below $1$.
+Choose the heavier side of any generator cut. Its mass $L\geq N/2$,
+so proportional selection gives cost at most
+$(N/(2L))^2(2L^2/25)=N^2/50$.
+Apply Lemma~\ref{lem:rounding} for integer capacities.
+\end{proof}
+
+The constant $r_*\approx2.75958108675$ is sharp for the particular
+four-pair product inequality: one pair with both capacities $M$ and
+three pairs with both capacities $m$ attain its limiting equality.
+This is not a sharpness claim for the sparse-half problem itself.
+The existence of some neighbourhood of the uniform weighting already
+follows from its strict slack and continuity; no novelty is asserted
+for that elementary observation or for the present explicit criterion.

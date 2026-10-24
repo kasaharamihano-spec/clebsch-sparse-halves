@@ -1,0 +1,216 @@
+\section{A star and one further exceptional class}
+
+\begin{theorem}\label{thm:sevenstar}
+Let $z$ be a Clebsch vertex and let $t\notin\{z\}\cup N_H(z)$.
+The seven capacities on $\{z\}\cup N_H(z)\cup\{t\}$ may be arbitrary
+nonnegative real numbers. If the other nine capacities equal $c\geq0$,
+there is a fractional half of cost at most $N^2/50$.
+For integer capacities the corresponding blow-up has a set of
+$\lfloor N/2\rfloor$ vertices inducing at most $N^2/50$ edges.
+\end{theorem}
+\begin{proof}
+Translate $z$ to $0$. The ten nonneighbours of $0$ are the sums of two
+distinct generators. Permuting the generators therefore sends $t$ to
+$3=1+2$. Thus it suffices to use exceptional set
+$X=\{0,1,2,3,4,8,15\}$, a four-cycle with three leaves at $0$.
+For $c=0$ the supported graph is bipartite with parts $\{0,3\}$ and $D$;
+a heavier part contains a zero-cost half. Hence normalize $c=1$.
+
+First give vertices $0,3$ capacities $d,e$, vertices $1,2$ capacity $a$,
+and vertices $4,8,15$ capacity $b$. All are nonnegative. Put
+\[
+ N=d+e+2a+3b+9=2h.
+\]
+The relevant matching types, with complementary pairs $A,B$ and $C,D$, are
+\[
+\begin{array}{ll}
+ A=(d,a),3(1,1),&B=(a,e),3(b,1),\\
+ C=(d,b),(e,1),2(1,1),&D=2(a,1),2(b,1).
+\end{array}
+\]
+For a side of mass $M\geq h$ and full cost $Q$, proportional selection
+costs $h^2Q/M^2$. In particular $Q\leq M^2/16$ gives $N^2/64$, while
+$Q\leq2M^2/25$ gives $N^2/50$. Set
+\[
+ g(s)=2s^2/25-s+4
+     =\frac2{25}(s-25/4)^2+\frac78\geq\frac78.
+\]
+The three actual independent sets
+\[
+ \{0,7,9,10,12\},\quad \{0,3,5,9,14\},\quad D
+\]
+have masses $d+4,d+e+3,2a+3b$. By Lemma~\ref{lem:alpha}, we may assume
+\[
+ d+4<4h/5,\qquad d+e+3<4h/5,\qquad2a+3b<4h/5. \tag{SI}
+\]
+Consequently $h>5+5d/4$ and $h<15$.
+If $D$ is heavy, $Q_D=M_D-4$ and
+$M_D^2-16Q_D=(M_D-8)^2$ settle the assertion. Otherwise
+\[
+ 2a+2b+4<h,\qquad M_C=d+e+b+5>h. \tag{SD}
+\]
+For $C$, $Q_C=M_C-4+(d-1)(b-1)$.
+If $(d-1)(b-1)\leq0$, scaling settles it by the same square identity.
+Only the two same-side cases below remain.
+
+\paragraph{Case I: $d,b\leq1$.}
+On $C$, fill $d,b$, the background neighbour of $e$, and one endpoint
+of each of the other two background edges. The initial mass $d+b+3$
+is at most $5<h$. Complete from $e$ and the two unused background
+endpoints. These additions all have unit cost per unit mass, and
+heaviness ensures feasibility. The cost is
+\[
+ F_C=h-4+(1-d)(1-b). \tag{SC}
+\]
+If $h\geq15/2$, then
+$g(h)-1=2(h-5)(h-15/2)/25\geq0$, so this suffices.
+Assume $5<h<15/2$.
+
+If $A$ is heavy and $a\geq1$, its exceptional edge straddles $1$;
+$Q_A=M_A-4+(d-1)(a-1)\leq M_A-4$ suffices.
+If $A$ is heavy and $a\leq1$, the same unit-completion construction gives
+$F_A=h-4+(1-d)(1-a)$. With $u=\max(a,b)$, the better cost is
+$h-4+(1-d)(1-u)$. From (SI), $2a+3b>6h/5-6$, hence
+$u>6h/25-6/5$. Its target gap is at least
+\[
+ \frac{(2h-9)(h-5)+d(55-6h)}{25}\geq0.
+\]
+If instead $A$ is light, $d+a+6<h$ and the formula for $N$ imply
+$e+3b>d+3$. Combining this with (SI) gives
+$b>2+2d/3-4h/15$. The target gap in (SC) is therefore at least
+\[
+ \frac2{25}(h-15/2)(h-25/3)
+ +d\left(\frac{4h}{15}-\frac13-\frac{2d}{3}\right)\geq0.
+\]
+The first product has two negative factors; the parenthesis is at
+least $1/3$, since $h>5$ and $d\leq1$.
+
+\paragraph{Case II: $d,b\geq1$ and $a\leq1$.}
+If $A$ is heavy its edge $(d,a)$ straddles $1$, so scaling suffices.
+Otherwise $B$ is heavy. If $e\geq1$, its edge $(a,e)$ straddles $1$
+and again scaling suffices.
+It remains that $e\leq1$ and $A$ is light.
+Fill $a,e$ and all three $b$ endpoints in $B$.
+By (SI) and $h>5$, their total mass satisfies
+\[
+ a+e+3b<4h/5-a+e\leq4h/5+1<h.
+\]
+Put $r=h-a-e-3b$. Heaviness of $B$ gives $0<r\leq3$.
+Completing on its three unit endpoints gives cost
+$F_B=ae+br$, and the identity
+\[
+ F_B-\bigl[h-4+(1-a)(1-e)\bigr]=(b-1)(r-3)\leq0
+\]
+shows $F_B\leq h-3$. This suffices if $h\geq15/2$.
+If $h<15/2$, lightness of $A$ gives $d<3/2$, and
+$2h=d+e+2a+3b+9<15$ with $d\geq1$ gives $b<5/3$.
+Thus $(d-1)(b-1)<1/3<g(M_C)$, so
+$Q_C\leq2M_C^2/25$ and proportional selection on $C$ suffices.
+
+\paragraph{Case III: $d,b,a\geq1$ and $h\leq10$.}
+Write $x=d-1$, $y=b-1$, and $A_0=a-1$, all nonnegative.
+The total and (SD) give
+\[
+ 15+e+x+2A_0+3y=2h\leq20,\qquad
+ 8+2A_0+2y<h\leq10.
+\]
+Hence $x+3y+e\leq5$ and $0\leq y<1$.
+Here $M_C=7+e+x+y$ and $Q_C=M_C-4+xy$.
+Since $g'(s)=4s/25-1>0$ for $s\geq7$,
+\[
+ \frac2{25}M_C^2-Q_C
+ \geq\frac{f(x,y)}{25},\qquad
+ f=2x^2-21xy+2y^2+3x+3y+23.
+\]
+For $0\leq y\leq3/4$, complete the square:
+\[
+ \frac{f(x,y)}{25}
+ =\frac2{25}\left(x-\frac{21y-3}{4}\right)^2
+  +\frac{7+6y-17y^2}{8}>0.
+\]
+The concave last term has endpoint values $7/8$ and $31/128$.
+For $3/4\leq y\leq1$ and $0\leq x\leq5-3y$,
+$f_x=4x-21y+3\leq23-33y<0$, so
+\[
+ f(x,y)\geq f(5-3y,y)=(1-y)(88-83y)\geq0.
+\]
+Thus proportional selection on the heavy side $C$ suffices.
+
+\paragraph{Case IV: $d,b,a\geq1$ and $10\leq h<15$.}
+Set $H=3-h/5$ and $\nu=d+e-h+6$.
+By (SI), $|\nu|<H$ and $0<H\leq1$; by (SD), $b>1-\nu$.
+On $C$, fill $d,e$ and all five background vertices, then take
+$1-\nu$ from the $b$ endpoint. This lies in $[0,b]$ and gives mass $h$
+and cost
+\[
+ F_C=h-4-(d-1)\nu. \tag{SN}
+\]
+For $\nu\geq0$ this is at most $h-4$.
+Now put $u=-\nu\in(0,H)$.
+If $e\geq1$, then $d-1\leq h-8-u$, so the error term in (SN)
+is at most $(h-8-u)u$.
+If $e\leq1$ and $B$ is heavy, its exceptional edge straddles $1$.
+If $e\leq1$ and $B$ is light, then
+$M_B=h+u+e-a<h$, so $a>e+u$.
+On $A$, fill $d$ and all six background vertices and take $e+u$ from
+the $a$ endpoint. This is feasible and has cost
+\[
+ F_A=h-4+(d-1)v,\qquad v=e+u-1\leq u<H,
+ \qquad d-1=h-8-v.
+\]
+For $v\leq0$ this is at most $h-4$.
+Otherwise both remaining errors have the form $(h-8-t)t$ with
+$0\leq t\leq H$. This is increasing there because
+$h-8-2H=7h/5-14\geq0$. Consequently the error is at most
+\[
+ (h-8-H)H=(7-6H)H.
+\]
+As $g(h)=7-7H+2H^2$, the target gap is at least
+\[
+ 7-14H+8H^2=8(H-7/8)^2+7/8>0.
+\]
+This completes the balanced family.
+
+\paragraph{Seven independent capacities.}
+Now let $a_1,a_2$ be arbitrary capacities on $1,2$ and let
+$b_1,b_2,b_3$ be arbitrary capacities on $4,8,15$.
+Use means $a=(a_1+a_2)/2$ and $b=(b_1+b_2+b_3)/3$ only to select
+one of the preceding constructions. The actual total $N$ is unchanged,
+as are the masses of all three independent witnesses in (SI).
+Every matching construction lifts as follows.
+
+On $A$ choose a largest actual $a$ leaf and use only its mean capacity
+$a$; on $C$ choose a largest actual $b$ leaf and use only its mean
+capacity $b$. The other selected capacities are unchanged, so all the
+corresponding proportional, unit-completion, and partial constructions
+retain their mass and cost.
+If balanced $D$ is heavy, omit a smallest actual $b$ leaf. Its actual
+matching side has mass $M\geq2a+2b+4\geq h$ and full cost $M-4$;
+the square identity gives a proportional half of cost at most $N^2/64$.
+
+For $B$, choose a largest actual $a$ leaf, cap its usable capacity at
+$a$, and take the matching side containing that leaf, vertex $3$, all
+three actual $b$ leaves, and their three unit background partners.
+Its mass $a+e+3b+3$ and full cost $ae+3b$ equal the balanced values.
+Thus every proportional $B$ construction lifts unchanged.
+For the explicit $B$ construction, fill $a,e$ and all three actual
+$b$ leaves, then select $r/3$ from each background partner.
+Because $0\leq r\leq3$, this is feasible and its cost is
+$ae+(b_1+b_2+b_3)r/3=ae+br$, again exactly the balanced cost.
+
+These sides exist in the full core: for generator $g$, the character
+zero on $g$ and one on $D\setminus\{g\}$ has a zero fibre containing
+$0,g$. For $g\in\{4,8,15\}$ it also contains $3=1+2$, giving $C$;
+for $g\in\{1,2\}$ it omits $3$, giving $A$. Their complementary
+fibres give $D$ and $B$, respectively. In the latter choose the
+\emph{other} $a$ generator so that the largest $a$ leaf lies in $B$.
+The required relabellings permute only the two $a$ leaves or the three
+$b$ leaves and preserve all other exceptional roles.
+
+Restoring $c$ multiplies masses by $c$ and costs by $c^2$.
+The integer conclusion follows from Lemma~\ref{lem:rounding}.
+\end{proof}
+
+The theorem covers the 160 seven-position sets containing a closed
+five-leaf star. The other seven-position shapes are not asserted here.
+In particular this does not prove the arbitrary seven-exception theorem.
